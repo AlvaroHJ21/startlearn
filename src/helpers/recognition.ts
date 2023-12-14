@@ -10,7 +10,7 @@ export function num2Letters(numero: number) {
     'tres',
     'cuatro',
     'cinco',
-    'seis',
+    'seís',
     'siete',
     'ocho',
     'nueve',
