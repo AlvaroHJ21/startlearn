@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { CardNumber, numbers } from '@/data/numbers';
+import { quitAcentos } from '@/helpers/recognition';
 
 function getCardNumberRandom() {
   const index = Math.floor(Math.random() * numbers.length);
@@ -34,7 +35,7 @@ export default function useGame(props: Props) {
     setRevealed(true);
 
     if (
-      currentNumber.text === guess.replace('.', '') ||
+      quitAcentos(currentNumber.text) === quitAcentos(guess.replace('.', '')) ||
       currentNumber.number.toString() === guess.replace('.', '')
     ) {
       setScore(score + 1);
@@ -57,7 +58,7 @@ export default function useGame(props: Props) {
     setCurrentNumber(getCardNumberRandom());
   }
 
-  function reset(){
+  function reset() {
     setScore(0);
     setLives(3);
     setEndGame(false);
@@ -77,6 +78,6 @@ export default function useGame(props: Props) {
     next,
     endGame,
 
-    reset
+    reset,
   };
 }

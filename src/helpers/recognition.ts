@@ -1,3 +1,7 @@
+export function quitAcentos(text: string) {
+  return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
 export function num2Letters(numero: number) {
   if (typeof numero === 'string') {
     numero = parseInt(numero, 10);
