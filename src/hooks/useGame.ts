@@ -13,7 +13,13 @@ export enum Status {
   endGame = 'endGame',
 }
 
-export default function useGame() {
+interface Props {
+  handleSaveScore(score: number): void;
+}
+
+export default function useGame(props: Props) {
+  const { handleSaveScore } = props;
+
   const [revealed, setRevealed] = useState(false);
 
   const [score, setScore] = useState(0);
@@ -40,6 +46,8 @@ export default function useGame() {
       if (lives === 1) {
         setEndGame(true);
         setStatus(Status.endGame);
+
+        handleSaveScore(score);
       }
     }
   }
@@ -47,6 +55,14 @@ export default function useGame() {
   function next() {
     setRevealed(false);
     setCurrentNumber(getCardNumberRandom());
+  }
+
+  function reset(){
+    setScore(0);
+    setLives(3);
+    setEndGame(false);
+    setStatus(Status.playing);
+    setRevealed(false);
   }
 
   return {
@@ -60,5 +76,7 @@ export default function useGame() {
     verify,
     next,
     endGame,
+
+    reset
   };
 }

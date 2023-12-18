@@ -48,6 +48,8 @@ export type IconName =
   | 'xml'
   | 'key'
   | 'mic'
+  | 'logout'
+  | 'bars'
   | 'store';
 
 interface Props {
@@ -105,6 +107,8 @@ export default function Icon(props: Props): React.JSX.Element {
     store: <MdStore size={size} />,
     key: <FeatherIcon name="key" size={size} />,
     mic: <FeatherIcon name="mic" size={size} />,
+    logout: <FeatherIcon name="log-out" size={size} />,
+    bars: <FeatherIcon name="bar-chart" size={size} />,
   };
 
   if (!iconObject[icon]) return <span></span>;
