@@ -7,6 +7,10 @@
     @apply w-72 aspect-square relative m-auto;
   }
 
+  .card-sm {
+    @apply w-48 aspect-square relative m-auto;
+  }
+
   .card-front,
   .card-back {
     @apply absolute inset-0 grid m-auto h-full place-content-center rounded-2xl shadow-lg;
@@ -22,7 +26,7 @@
   }
 
   .card-back {
-    @apply text-white bg-primary;
+    @apply text-white bg-primary p-2;
     transform: rotateY(-180deg);
   }
 

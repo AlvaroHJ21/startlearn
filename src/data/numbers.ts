@@ -64,7 +64,6 @@ export const numbers = [
   { number: 58, text: 'cincuenta y ocho' },
   { number: 59, text: 'cincuenta y nueve' },
   { number: 60, text: 'sesenta' },
-  { number: 60, text: 'sesenta' },
   { number: 61, text: 'sesenta y uno' },
   { number: 62, text: 'sesenta y dos' },
   { number: 63, text: 'sesenta y tres' },

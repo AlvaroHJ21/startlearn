@@ -36,8 +36,16 @@ export default function AppPage() {
           </>
         )}
 
-        <Button.Link to="/practice" variant="outlined">Practicar</Button.Link>
+        <Button.Link to="/practice" variant="outlined">
+          Practicar
+        </Button.Link>
         <Button onClick={handleNewGame}>Nueva Partida</Button>
+      </div>
+
+      <div className="fixed text-sm tracking-[-.2rem] bottom-2 right-4">
+        <Button.Link to="/numbers">
+          1<span className="text-xl">2</span><span className='text-2xl'>3</span>
+        </Button.Link>
       </div>
     </div>
   );
