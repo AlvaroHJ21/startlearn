@@ -50,6 +50,7 @@ export type IconName =
   | 'mic'
   | 'logout'
   | 'bars'
+  | 'volume'
   | 'store';
 
 interface Props {
@@ -109,6 +110,7 @@ export default function Icon(props: Props): React.JSX.Element {
     mic: <FeatherIcon name="mic" size={size} />,
     logout: <FeatherIcon name="log-out" size={size} />,
     bars: <FeatherIcon name="bar-chart" size={size} />,
+    volume: <FeatherIcon name="volume-2" size={size} />,
   };
 
   if (!iconObject[icon]) return <span></span>;

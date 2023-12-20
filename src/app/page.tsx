@@ -24,7 +24,7 @@ export default function AppPage() {
 
   return (
     <div>
-      <div className="flex flex-col gap-4 py-8">
+      <div className="flex flex-col gap-2 py-8">
         {!user && (
           <>
             <h2 className="text-3xl text-center text-primary font-luckiest">Nuevo jugador</h2>
@@ -36,7 +36,7 @@ export default function AppPage() {
           </>
         )}
 
-        <Button variant="outlined">Practicar</Button>
+        <Button.Link to="/practice" variant="outlined">Practicar</Button.Link>
         <Button onClick={handleNewGame}>Nueva Partida</Button>
       </div>
     </div>

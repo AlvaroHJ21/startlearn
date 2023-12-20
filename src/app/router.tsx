@@ -4,6 +4,7 @@ import AppLayout from './layout';
 import GamePage from './game/page';
 import TopPage from './top/page';
 import GameLayout from './game/layout';
+import PracticePage from './practice/page';
 
 export const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ export const router = createBrowserRouter([
       {
         path: '/top',
         element: <TopPage />,
+      },
+      {
+        path: '/practice',
+        element: <PracticePage />,
       },
     ],
   },

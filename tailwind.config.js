@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         primary: '#6499E9',
+        secondary: '#9EDDFF',
       },
       fontFamily: {
         luckiest: 'Luckiest Guy',
